@@ -1,5 +1,4 @@
 # my website archive
-broken code™
+enjoy broken code™
 
-
-ribbit
+u can modify it, im kind
