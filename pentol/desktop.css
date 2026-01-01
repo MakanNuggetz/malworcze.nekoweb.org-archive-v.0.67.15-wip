@@ -1,0 +1,201 @@
+/* ===== BASE ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111;
+    font-family: "Arial", "Noto Sans", sans-serif;
+    padding-top: 70px; /* space for navbar */
+  }
+  
+  /* ===== TEXT ===== */
+  p {
+    margin: 8px 0;
+  }
+  
+  .nav-left a {
+      text-decoration: none; /* removes underline */
+      color: inherit; /* keeps same color as the div */
+  }
+  
+  a img {
+    display: inline-block; /* ensures images stay inline */
+    margin-right: 10px;    /* optional spacing between blinkies */
+    vertical-align: middle; /* optional to align vertically */
+}
+
+.team-container {
+  display: flex !important;   /* Force flexbox layout */
+  flex-direction: row;        /* Ensure they go left-to-right */
+  flex-wrap: nowrap;          /* Prevents them from jumping to the next line */
+  gap: 15px;                  /* Space between them */
+  overflow-x: auto;           /* Adds a scrollbar if they get too wide */
+  background-color: #111;     /* Match your background */
+  padding: 10px;
+}
+
+.team-member {
+  flex: 0 0 auto;  
+  text-align: center;           /* Prevents items from shrinking or growing */
+}
+
+/* CUSTOM SIZE: Control the image dimensions here */
+.team-member img {
+  width: 60px;               /* Change this to make them bigger or smaller */
+  height: 60px;
+  object-fit: cover;
+  display: block;
+}
+
+.team-member p {
+  color: white;
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: Arial, sans-serif;
+}
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #0d0d0d;
+    border-bottom: 2px solid #333;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 0 24px;
+    box-sizing: border-box;
+    z-index: 1000;
+  
+    transform: translateY(0);
+    animation: navSlide 1s ease-out;
+    animation-fill-mode: both;
+    will-change: transform, opacity;
+  }
+  
+  
+  .nav-left {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-right a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+  
+  .nav-right a:hover {
+    color: white;
+  }
+  
+  /* ===== BOX ===== */
+  .box {
+    margin: auto;
+    color: white;
+    border: 2px solid #444;
+    padding: 20px;
+    font-size: 20px;
+  
+    max-width: 600px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .hero-img {
+    width: 160px; /* adjust, don’t cry */
+    height: auto;
+  }
+
+  .hero-text h2 {
+    margin: 0;
+  }
+  
+  .tiny-text {
+    font-size: 14px;
+    margin: 4px 0 0;
+  }
+  
+
+  .version-footer {
+    position: fixed;              /* sticks to screen */
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: white;
+    /* background: rgba(0, 0, 0, 0.5); */
+    padding: 4px 8px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+ul {
+  margin: 4px 0;
+  padding-left: 16px; /* controls bullet indent */
+}
+
+li {
+  font-size: 16px;    /* smaller text */
+  margin: 2px 0;      /* less vertical space */
+}
+
+li a {
+  font-size: 12px;
+  color: #7aa2ff;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+  
+  /* ===== IMAGES ===== */
+  .box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .blinkies {
+    display: flex;        /* put children side by side */
+    gap: 5px;             /* optional spacing between blinkies */
+    align-items: center;  /* vertical alignment */
+  }
+  
+  .blinkies img {
+      display: block;       /* remove extra bottom space under images */
+      max-height: 50px;     /* optional: resize all blinkies to same height */
+  }
+  
+  .blinkies img:hover {
+    filter: brightness(1.2); 
+    transform: scale(1.1);   
+    transition: 0.2s;     
+  }
+
+  /* ===== CAPTIONS ===== */
+  .caption {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 6px;
+  }
+  
+  /* ===== ANIMATIONS ===== */
